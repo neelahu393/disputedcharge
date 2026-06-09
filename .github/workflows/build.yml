@@ -5,6 +5,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: windows-latest
@@ -28,7 +31,7 @@ jobs:
             --hidden-import pyxlsb `
             --hidden-import openpyxl `
             --hidden-import openpyxl.utils.datetime `
-            扣回回補調帳產生器.py
+            chargeback_tool.py
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
