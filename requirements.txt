@@ -1,0 +1,2 @@
+pyxlsb==1.0.10
+openpyxl==3.1.5
